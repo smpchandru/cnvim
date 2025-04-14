@@ -38,13 +38,14 @@ map("n", "\\y", '"+y', { desc = "Copy to system clipboard", silent = true, norem
 map("n", "\\dd", '"_dd', { desc = "Delete without copy", silent = true, noremap = true })
 map("n", "\\p", '"+p', { desc = "Paste from system clipboard", silent = true, noremap = true })
 map("n", "\\r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+map("v", "<C-/>", "gb", { desc = "Comment block", remap = true, silent = true })
 -- visual mode mapings
 -- Use tab to move mapings selected text
-map("v", "<S-TAB>", "<gv", { desc = "Move visual text left", noremap = true, silent = true })
-map("v", "<TAB>", ">gv", { desc = "Move visual text rigt ", noremap = true, silent = true })
-map("v", "<C-/>", "gb", { desc = "Comment block", remap = true, silent = true })
-map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move text down", silent = true, noremap = true })
-map("v", "K", ":m '<-2<CR>gv=gv", { desc = "move text up", silent = true, noremap = true })
+-- bellow mapings handled by mini.move plugin
+-- map("v", "<M-j>", ":m '>+1<CR>gv=gv", { desc = "Move text down", silent = true, noremap = true })
+-- map("v", "<M-k>", ":m '<-2<CR>gv=gv", { desc = "move text up", silent = true, noremap = true })
+-- map("v", "<M-h>", "<gv", { desc = "Move visual text left", noremap = true, silent = true })
+-- map("v", "<M-l>", ">gv", { desc = "Move visual text rigt ", noremap = true, silent = true })
 map("v", "\\y", '"+y', { desc = "Copy to system clipboard", silent = true, noremap = true })
 map("v", "\\d", '"_d', { desc = "Delete with black hole", silent = true, noremap = true })
 map("x", "\\p", '"_dP', { desc = "Paste without yank on visual selection", silent = true, noremap = true })
