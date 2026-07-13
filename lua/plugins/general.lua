@@ -52,6 +52,7 @@ return {
 	-- lazy.nvim
 	{
 		"m4xshen/hardtime.nvim",
+		enabled = false,
 		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
 		opts = {},
 	},
@@ -89,4 +90,6 @@ return {
 	},
 	-- { "echasnovski/mini.pairs", enabled = false },
 	-- { "folke/noice.nvim", enabled = false },
+	{ dir = "~/work/rust/nvim_float_term/" },
+	{ "ray-x/go.nvim" },
 }

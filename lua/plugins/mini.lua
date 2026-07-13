@@ -1,6 +1,6 @@
 local M = {
 
-	"echasnovski/mini.nvim",
+	"nvim-mini/mini.nvim",
 	config = function()
 		require("mini.bracketed").setup()
 		-- require("mini.surround").setup()
